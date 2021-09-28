@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id()->comment('post id');
-            $table->string('email', 20)->comment('notification of post creation');
+            $table->string('email', 50)->comment('notification email address for post creation');
             $table->string('title', 30)->comment('post title');
             $table->mediumText('content')->comment('post content');
             $table->dateTime('created_at')->comment('post created time');
