@@ -4,6 +4,8 @@ use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
 
+$__current_process_user = trim(shell_exec('whoami'));
+
 return [
 
     /*
@@ -49,8 +51,8 @@ return [
 
         'daily' => [
             'driver' => 'daily',
-            'path' => storage_path('logs/laravel.log'),
-            'level' => env('LOG_LEVEL', 'debug'),
+            'path' => storage_path('logs/laravel-' . $__current_process_user . '.log'),
+            'level' => 'debug',
             'days' => 14,
         ],
 
