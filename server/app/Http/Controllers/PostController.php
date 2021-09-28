@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Post\Store as StoreValidate;
 use App\Services\PostService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class PostController extends Controller
 {
+    private $service;
+
     /**
      * Undocumented function
      *
@@ -32,7 +35,7 @@ class PostController extends Controller
     }
 
     /**
-     * create post view action action methods
+     * create post view action methods
      *
      * @return void
      */
@@ -43,8 +46,18 @@ class PostController extends Controller
         return view('post.create');
     }
 
-    protected function store()
+    /**
+     * cerate post model action  methods
+     *
+     * @param StoreValidate $request
+     * @return void
+     */
+    protected function store(StoreValidate $request)
     {
         Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
+
+        $this->service->createPost($request);
+
+        return redirect()->route('post.index');
     }
 }
