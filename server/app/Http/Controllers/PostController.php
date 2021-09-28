@@ -30,4 +30,21 @@ class PostController extends Controller
 
         return view('post.index');
     }
+
+    /**
+     * create post view action action methods
+     *
+     * @return void
+     */
+    protected function create()
+    {
+        Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
+
+        return view('post.create');
+    }
+
+    protected function store()
+    {
+        Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
+    }
 }
