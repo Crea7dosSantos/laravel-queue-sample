@@ -11,11 +11,14 @@ class PostService
     /**
      * get post list
      *
-     * @return void
+     * @return Post $posts
      */
     public function getPosts()
     {
         Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
+
+        $posts = Post::all();
+        return $posts;
     }
 
     /**

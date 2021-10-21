@@ -8,7 +8,7 @@
 
 <body>
     <header></header>
-    <div class="container px-24 py-12">
+    <div class="px-24 py-12">
         @yield('content')
     </div>
     <footer></footer>
