@@ -31,7 +31,9 @@ class PostController extends Controller
     {
         Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
 
-        return view('post.index');
+        $posts = $this->service->getPosts();
+
+        return view('post.index', ['posts' => $posts]);
     }
 
     /**
