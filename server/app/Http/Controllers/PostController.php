@@ -33,6 +33,8 @@ class PostController extends Controller
 
         $posts = $this->service->getPosts();
 
+        Log::debug('Return post list view interface');
+
         return view('post.index', ['posts' => $posts]);
     }
 
