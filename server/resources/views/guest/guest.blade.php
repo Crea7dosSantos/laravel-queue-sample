@@ -10,8 +10,9 @@
 
 <body>
     <div>
-        <!-- @yield('content') -->
-        <h1>Guest</h1>
+        <div id="app">
+            <app></app>
+        </div>
     </div>
 </body>
 <script src="{{ mix('js/guest/app.js') }}"></script>
