@@ -17,6 +17,11 @@ class IndexController extends Controller
         Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
     }
 
+    /**
+     * guest spa routing
+     *
+     * @return void
+     */
     protected function index()
     {
         Log::debug(__CLASS__ . '::' . __FUNCTION__ . ' called:(' . __LINE__ . ')');
