@@ -3,14 +3,16 @@ import VueRouter from 'vue-router'
 
 import Guest from './components/pages/Guest.vue'
 import Guest2 from './components/pages/Guest2.vue'
+import NotFound from './components/pages/NotFound.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-    // {
-    //     path: '*',
-    //     component: NotFound
-    // },
+    {
+        path: '*',
+        name: 'notfound',
+        component: NotFound
+    },
     {
         path: '/',
         name: 'guest',
