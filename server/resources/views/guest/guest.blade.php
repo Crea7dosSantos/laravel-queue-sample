@@ -5,7 +5,7 @@
     <meta name="viewport">
     <title>Guest</title>
     <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
-    <!-- <link rel="stylesheet" href="{{ mix('/css/app.css') }}"> -->
+    <link rel="stylesheet" href="{{ mix('/css/guest/app.css') }}">
 </head>
 
 <body>
@@ -14,6 +14,6 @@
         <h1>Guest</h1>
     </div>
 </body>
-<!-- <script src="{{ mix('js/app.js') }}"></script> -->
+<script src="{{ mix('js/guest/app.js') }}"></script>
 
 </html>
